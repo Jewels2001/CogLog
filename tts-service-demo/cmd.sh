@@ -5,6 +5,6 @@ curl --location --request POST "https://centralus.tts.speech.microsoft.com/cogni
 --header 'User-Agent: curl' \
 --data-raw '<speak version='\''1.0'\'' xml:lang='\''en-US'\''>
     <voice xml:lang='\''en-CA'\'' xml:gender='\''Male'\'' name='\''en-CA-LiamNeural'\''>
-        Hello... CogLog test. Hello World. Hello World? Test. 1, 2, 3!
+        Hi
     </voice>
 </speak>'
