@@ -5,9 +5,14 @@ import Buttons from './components/Buttons.vue'
 
 <template>
   <header>
-    <div class="uploadBtn">
-      <Buttons title = "UPLOAD"/>
+    <div class = "container">
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/results">Results</RouterLink>
+      </nav>
+
     </div>
+
   </header>
 
   <RouterView />
@@ -18,14 +23,23 @@ header {
   line-height: 1.5;
   max-height: 100vh;
 }
-.uploadBtn {
+
+nav {
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
 }
 
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
 
 </style>
 
