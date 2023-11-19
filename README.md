@@ -13,13 +13,13 @@ Client-Side:
 `npm install`
 `npm run dev`
 
-Model + Backend:
-1. Do x
-2. Do y
-3. Do z
-4. Have fun!
+Decoder Model:
+- Follow instructions from [speechBCI](https://github.com/fwillett/speechBCI/tree/main) repo.
 > [!IMPORTANT]
-> Important thing to be aware of when utilizing!
+> We used a 16 vCPU + 128GB RAM VM to host the model. 64GB was not enough.
+
+Gateway Service:
+`go run server.go`
 
 ## Contributors
 - Name
