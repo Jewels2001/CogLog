@@ -10,7 +10,9 @@ Brain-Computer Interface (BCI) equipment allows people to connect with their env
 
 ## Usage
 Client-Side:
+
 `npm install`
+
 `npm run dev`
 
 Decoder Model:
@@ -19,6 +21,7 @@ Decoder Model:
 > We used a 16 vCPU + 128GB RAM VM to host the model. 64GB was not enough.
 
 Gateway Service:
+
 `go run server.go`
 
 ## Roadmap for Future
