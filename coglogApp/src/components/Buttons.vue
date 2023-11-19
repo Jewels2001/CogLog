@@ -3,9 +3,11 @@ defineProps(['title'])
 </script>
 
 <template>
-    <button class = "uploadButton">
+    <form>
+    <button type = "submit" class = "uploadButton">
         {{ title }}
     </button>
+    </form> 
 </template>
 
 <style scoped>

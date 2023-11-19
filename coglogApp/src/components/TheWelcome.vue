@@ -1,11 +1,84 @@
 <script setup>
 import WelcomeItem from './WelcomeItem.vue'
+import Dropdown from './Dropdown.vue'
+
+import { ref } from 'vue'
+
+const examplesDropdown = ref("")
+
+let context;
+let request;
+let source;
+
+// Change these to prover values
+let URL = "192.168.2.14"
+let PORT = "8080"
+
+function TestMP3(abc) {
+  try {
+    // Request from server
+    context = new AudioContext();
+    request = new XMLHttpRequest();
+    request.open(
+      "POST",
+      "http://" + URL + ":" + PORT + "/bci-decode/audio",
+      true,
+    );
+    request.responseType = "arraybuffer";
+
+    // Play Audio
+    request.onload = () => {
+      context.decodeAudioData(request.response, (buffer) => {
+        source = context.createBufferSource();
+        source.buffer = buffer;
+        source.connect(context.destination);
+        source.start(0);
+      });
+    };
+    console.log(abc);
+    request.send(abc);
+  } catch (e) {
+    console.error(e)
+    alert("web audio api not supported");
+  }
+}
+
 </script>
 
 <template>
-  <WelcomeItem>
-    <template #title>CogLog</template>
-  </WelcomeItem>
+  <div class="container">
+    <form @submit.prevent>
+    <select v-model= "examplesDropdown">
+    <label for="exampleSentences">Run an example:</label>
+    <option disabled value="">Run one example</option>
+            <option value="0">"theocracy reconsidered"</option>
+            <option value="1">"rich purchased several signed lithographs"</option>
+          <option value=2>"so rules we made in unabashed collusion"</option>
+          <option value=3>"lori's costume needed black gloves to be completely elegant"</option>
+          <option value=4>"the tooth fairy forgot to come when roger's tooth fell out"</option>
+          <option value=5>"that stinging vapor was caused by chloride vaporization"</option>
+          <option value=6>"before thursday's exam review every formula"</option>
+          <option value=7>"wildfire near sunshine forces park closures"</option>
+          <option value=8>"the word means it won't boil away easily nothing else"</option>
+          <option value=9>"would a blue feather in a man's hat make him happy all day"</option>
+    <!-- <input list="exampleSentences" id="exampleSentences"/> -->
+
+    <!-- <datalist id="exampleSentences">
+        <option value="theocracy reconsidered"></option>
+        <option value="so rules we made in unabashed collusion"></option>
+        <option value="lori's costume needed black gloves to be completely elegant"></option>
+        <option value="the tooth fairy forgot to come when roger's tooth fell out"></option>
+        <option value="that stinging vapor was caused by chloride vaporization"></option>
+        <option value="before thursday's exam review every formula"></option>
+        <option value="wildfire near sunshine forces park closures"></option>
+        <option value="the word means it won't boil away easily nothing else"></option>
+        <option value="would a blue feather in a man's hat make him happy all day"></option>
+    </datalist> -->
+
+  </select>
+  <button @click="TestMP3(examplesDropdown)">Submit</button>
+  </form>
+    </div>
 
   <WelcomeItem>
     <template #heading>Brain to Speech Program</template>
@@ -14,6 +87,18 @@ import WelcomeItem from './WelcomeItem.vue'
     <br> Accepted files for upload: .............
   </WelcomeItem>
 </template>
+
+<style scoped>
+.container{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+</style>
+
+
 <!--
 <script setup>
 

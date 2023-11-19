@@ -5,11 +5,7 @@
           <img alt="Cerecode logo" class="logo" src="@/assets/cclogocolor.svg" width="525" height="125" />
         </slot>
     </h1>
-  
     <div class="item">
-    <!--
-    <i><slot name="icon"></slot></i>
-    -->
       <div class="details">
         <h3>
           <slot name="heading"></slot>
