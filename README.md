@@ -44,6 +44,7 @@ Further, we could improve upon our decoding performace, possibly writing our own
 
 ## Project Links
 - [Devpost](https://devpost.com/software/coglog)
+- [UI Blueprint and Planning](https://docs.google.com/document/d/10pNURIpD_GKm8953ssNs20slLFSt9PApSv4-adtuc4A/edit?usp=sharing)
 - [Slide Deck](https://docs.google.com/presentation/d/1Xrh-y_W0OSOFUX3jnuKIfwNEUtSFSuoYoYQwCp_6Km8/edit?usp=sharing)
 - [Video](https://youtu.be/DVbrny5-V0c)
 
