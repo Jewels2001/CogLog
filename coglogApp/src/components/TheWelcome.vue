@@ -5,12 +5,22 @@ import Dropdown from './Dropdown.vue'
 
 <template>
   <div class="container">
-    <form action = "examplesDropdown">
+    <select v-model= "examplesDropdown">
     <label for="exampleSentences">Run an example:</label>
-    
-    <input list="exampleSentences" id="exampleSentences"/>
+    <option disabled value="">Run one example</option>
+            <option value="0">"theocracy reconsidered"</option>
+            <option value="1">"rich purchased several signed lithographs"</option>
+          <option value=2>"so rules we made in unabashed collusion"</option>
+          <option value=3>"lori's costume needed black gloves to be completely elegant"</option>
+          <option value=4>"the tooth fairy forgot to come when roger's tooth fell out"</option>
+          <option value=5>"that stinging vapor was caused by chloride vaporization"</option>
+          <option value=6>"before thursday's exam review every formula"</option>
+          <option value=7>"wildfire near sunshine forces park closures"</option>
+          <option value=8>"the word means it won't boil away easily nothing else"</option>
+          <option value=9>"would a blue feather in a man's hat make him happy all day"</option>
+    <!-- <input list="exampleSentences" id="exampleSentences"/> -->
 
-    <datalist id="exampleSentences">
+    <!-- <datalist id="exampleSentences">
         <option value="theocracy reconsidered"></option>
         <option value="so rules we made in unabashed collusion"></option>
         <option value="lori's costume needed black gloves to be completely elegant"></option>
@@ -20,8 +30,8 @@ import Dropdown from './Dropdown.vue'
         <option value="wildfire near sunshine forces park closures"></option>
         <option value="the word means it won't boil away easily nothing else"></option>
         <option value="would a blue feather in a man's hat make him happy all day"></option>
-    </datalist>
-    </form>
+    </datalist> -->
+  </select>
     </div>
 
   <WelcomeItem>
