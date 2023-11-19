@@ -1,10 +1,53 @@
 <script setup>
 import WelcomeItem from './WelcomeItem.vue'
 import Dropdown from './Dropdown.vue'
+
+import { ref } from 'vue'
+
+const examplesDropdown = ref("")
+
+let context;
+let request;
+let source;
+
+// Change these to prover values
+let URL = "localhost"
+let PORT = "8080"
+
+function TestMP3(abc) {
+  try {
+    // Request from server
+    context = new AudioContext();
+    request = new XMLHttpRequest();
+    request.open(
+      "POST",
+      "http://" + URL + ":" + PORT + "/bci-decode/audio",
+      true,
+    );
+    request.responseType = "arraybuffer";
+
+    // Play Audio
+    request.onload = () => {
+      context.decodeAudioData(request.response, (buffer) => {
+        source = context.createBufferSource();
+        source.buffer = buffer;
+        source.connect(context.destination);
+        source.start(0);
+      });
+    };
+    console.log('sending')
+    request.send(body = abc);
+  } catch (e) {
+    console.error(e)
+    alert("web audio api not supported");
+  }
+}
+
 </script>
 
 <template>
   <div class="container">
+    <form>
     <select v-model= "examplesDropdown">
     <label for="exampleSentences">Run an example:</label>
     <option disabled value="">Run one example</option>
@@ -31,7 +74,10 @@ import Dropdown from './Dropdown.vue'
         <option value="the word means it won't boil away easily nothing else"></option>
         <option value="would a blue feather in a man's hat make him happy all day"></option>
     </datalist> -->
+
   </select>
+  <button @click="TestMP3(examplesDropdown)">Submit</button>
+  </form>
     </div>
 
   <WelcomeItem>
@@ -51,6 +97,8 @@ import Dropdown from './Dropdown.vue'
     padding: 10px;
 }
 </style>
+
+
 <!--
 <script setup>
 
