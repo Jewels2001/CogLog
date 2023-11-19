@@ -1,27 +1,33 @@
-// Example streaming server
 package main
 
 import (
-	_ "embed"
+	"io"
 	"log"
 	"net/http"
-)
 
-//go:embed test.mp3
-var test_mp3 []byte
+	"github.com/Jewels2001/CogLog/tts-service/tts"
+	"github.com/Jewels2001/CogLog/tts-service/bcidecode"
+)
 
 const PORT = ":8080"
 
 func main() {
-	http.HandleFunc("/test.mp3", StreamTestMP3)
-	log.Println("Serving on localhost" + PORT + "...")
-	http.ListenAndServe(PORT, nil)
+	if err := tts.InitTTS(); err != nil {
+		log.Fatal(err)
+	}
+	if err := bcidecode.InitBci(); err != nil {
+		log.Fatal(err)
+	}
+
+	http.HandleFunc("/bci-decode/audio", audio)
+	log.Println("Serving on port " + PORT + "...")
+	log.Fatal(http.ListenAndServe(PORT, nil))
 }
 
-func StreamTestMP3(w http.ResponseWriter, r *http.Request) {
+func audio(w http.ResponseWriter, r *http.Request) {
 	log.Println("Request:", r.URL)
 
-    // Enable CORS
+	// Enable CORS
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
@@ -31,7 +37,34 @@ func StreamTestMP3(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-    // Return Data
-    w.Header().Set("Content-Type", "audio/mp3")
-	w.Write(test_mp3)
+	// Parse Request
+	idx, err := io.ReadAll(r.Body)
+	if err != nil {
+		log.Println("main:", err)
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	log.Println("idx:", idx)
+
+	// Get Text from BCI data
+	text, err := bcidecode.BciDecode(idx)
+	if err != nil {
+		log.Println("main:", err)
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+    log.Println("text:", text)
+
+	// Convert to speech
+	data, err := tts.GetAudioData(text, "en-CA", "Male", "en-CA-LiamNeural")
+	if err != nil {
+		log.Println("main:", err)
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+    log.Println("audio:", len(*data))
+
+	// Return Data
+	w.Header().Set("Content-Type", "audio/mp3")
+	w.Write(*data)
 }
