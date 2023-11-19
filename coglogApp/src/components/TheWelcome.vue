@@ -1,6 +1,7 @@
 <script setup>
 import WelcomeItem from './WelcomeItem.vue'
 import Dropdown from './Dropdown.vue'
+import Buttons from '../components/Buttons.vue'
 
 import { ref } from 'vue'
 
@@ -76,7 +77,8 @@ function TestMP3(abc) {
     </datalist> -->
 
   </select>
-  <button @click="TestMP3(examplesDropdown)">Submit</button>
+  <Buttons class="temp" @click="TestMP3(examplesDropdown)" title = "UPLOAD"/>
+  <!-- <button @click="TestMP3(examplesDropdown)">Submit</button> -->
   </form>
     </div>
 
@@ -89,13 +91,42 @@ function TestMP3(abc) {
 </template>
 
 <style scoped>
+.uploadBtn {
+  position:absolute;
+  margin:auto;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
 .container{
-    position: absolute;
+    position: inline-block;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px;
+    /* padding: 25px; */
 }
+.temp {
+  text-align: center;
+}
+
+select {
+  /* position: absolute; */
+  font-family: 'Figtree', sans-serif;
+    background-color: #202020;
+    color: #b9d4b4;
+    transition: 0.3s ease-in-out;
+    border: 0.01em solid #b9d4b4;
+    border-radius: 0.3em;
+    padding: 1px 0px;
+    margin: 5px;
+    text-align: center;
+}
+
+/* form {
+  padding: 2px 2px;
+} */
+
 </style>
 
 

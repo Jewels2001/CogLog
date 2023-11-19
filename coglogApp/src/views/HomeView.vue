@@ -6,12 +6,12 @@ import Buttons from '../components/Buttons.vue'
 <template>
   <main>
     <TheWelcome />
-    <form class = "chooseFile">
+    <!-- <form class = "chooseFile">
       <input type = "file" id = "fileUpload" />
     </form>
     <div class = "uploadBtn">
       <Buttons title = "UPLOAD"/>
-    </div>
+    </div> -->
   </main>
 </template>
 

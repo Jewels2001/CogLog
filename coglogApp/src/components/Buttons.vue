@@ -3,7 +3,7 @@ defineProps(['title'])
 </script>
 
 <template>
-    <form>
+    <form @submit.prevent>
     <button type = "submit" class = "uploadButton">
         {{ title }}
     </button>
