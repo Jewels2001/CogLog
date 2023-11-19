@@ -1,10 +1,4 @@
 <template>
-  <div>
-    <h1>
-        <slot name = "title">
-          <img alt="CogLog logo" class="logo" src="@/assets/coglogLogo.svg" width="525" height="125" />
-        </slot>
-      </h1>
   <div class="item">
     
     <!--
@@ -13,24 +7,19 @@
     </i>
     -->
     <div class="details">
+      <h1>
+        <slot name = "title"></slot>
+      </h1>
       <h3>
         <slot name="heading"></slot>
       </h3>
       <slot></slot>
     </div>
   </div>
-</div>
   
 </template>
 
 <style scoped>
-.logo{
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-/*
 h1{
   font-size: 5rem;
   font-weight: 500;
@@ -40,18 +29,31 @@ h1{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-*/
+
 .item {
   text-align: center;
   display: flex;
   position: absolute;
-  top: 80%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.right_item {
+  text-align: right;
+  display: flex;
+  position: relative;
+}
+
+.left_item {
+  text-align: left;
+  display: flex;
+  position: relative;
+}
+
 .details {
   flex: 1;
+  margin-left: 1rem;
 }
 
 /*
