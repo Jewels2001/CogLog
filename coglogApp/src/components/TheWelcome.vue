@@ -47,7 +47,7 @@ function TestMP3(abc) {
 
 <template>
   <div class="container">
-    <form>
+    <form @submit.prevent>
     <select v-model= "examplesDropdown">
     <label for="exampleSentences">Run an example:</label>
     <option disabled value="">Run one example</option>
