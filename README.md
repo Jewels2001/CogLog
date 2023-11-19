@@ -3,7 +3,12 @@ _A brain-to-data platform by_  <img src="https://github.com/Jewels2001/CogLog/as
 
 For [natHACKS 2023](https://nathacks23.devpost.com/) focused on brain-to-text and speech-to-text capabilities.
 
-///
+/// <a href="#intro">Intro</a> •
+  <a href="#usage">How to Use</a> •
+  <a href="#roadmap-for-future">Future</a> •
+  <a href="#contributors">Contributors</a> •
+  <a href="#project-links">Links</a> •
+  <a href="#resources">Resources</a> </p>
 
 ## Intro
 Brain-Computer Interface (BCI) equipment allows people to connect with their environment and other people with greater awareness and capability. CogLog has produced a SAAS called Cerecode that leverages BCI technology to convert brain wave readings into spoken speech. This gives people who have limited or decreasing speech capabilities a way to communicate more clearly with those around them. More specifically, Cerecode utilizes models from the open-source [dataset](https://datadryad.org/stash/dataset/doi:10.5061/dryad.x69p8czpq) associated with [_"A high-performace speech neruprosthesis"_](https://www.nature.com/articles/s41586-023-06377-x.pdf) which focuses on decoding phonemes from intracortical microelectrode arrays. 
