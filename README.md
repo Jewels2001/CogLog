@@ -1,5 +1,5 @@
 ## <img src="https://github.com/Jewels2001/CogLog/assets/53021785/3716b232-c60c-466d-897a-01bca1d325b4" width="300">
-_A Brain to Data Platform by_  <img src="https://github.com/Jewels2001/CogLog/assets/53021785/1479f025-a925-41cd-b8c3-2952072c47fb" width="60">.
+_A brain-to-data platform by_  <img src="https://github.com/Jewels2001/CogLog/assets/53021785/1479f025-a925-41cd-b8c3-2952072c47fb" width="60">.
 
 For [natHACKS 2023](https://nathacks23.devpost.com/) focused on brain-to-text and speech-to-text capabilities.
 
