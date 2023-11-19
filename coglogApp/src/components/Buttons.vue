@@ -27,6 +27,7 @@ button:hover{
     color: #202020;
     transition: 0.3s ease-in-out;
     border-radius: 0.2em;
+    border: none;
 }
 
 button:active{
