@@ -1,5 +1,37 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import Buttons from './components/Buttons.vue'
+</script>
+
+<template>
+  <header>
+    <div class="uploadBtn">
+      <Buttons title = "UPLOAD"/>
+    </div>
+  </header>
+
+  <RouterView />
+</template>
+
+<style scoped>
+header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+.uploadBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+
+</style>
+
+<!--
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 
@@ -83,3 +115,4 @@ nav a:first-of-type {
   }
 }
 </style>
+-->
