@@ -42,7 +42,7 @@ h1{
   text-align: center;
   display: flex;
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

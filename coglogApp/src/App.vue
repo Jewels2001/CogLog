@@ -16,7 +16,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
   <RouterView />
   <div class="footer">
-    <img alt="CogLog logo" class="logo" src="@/assets/clminibw.svg" width="65" height="65" />
+    <img alt="CogLog logo" class="logo" src="@/assets/clfullcolor.svg" width="85" height="65" /> 
   </div>
 </template>
 
@@ -53,7 +53,6 @@ nav a {
   width: 100%;
   background-color: var(--color-background-soft)
 }
-
 </style>
 
 <!--
