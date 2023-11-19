@@ -18,7 +18,7 @@ import Buttons from '../components/Buttons.vue'
 <style scoped>
 .uploadBtn {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
@@ -26,7 +26,7 @@ import Buttons from '../components/Buttons.vue'
 
 .chooseFile{
   position: absolute;
-  top: 42%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
