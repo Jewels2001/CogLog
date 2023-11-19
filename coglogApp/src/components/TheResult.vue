@@ -20,7 +20,7 @@ const result_dat = reactive({
         {{result_dat.txt}}
     </div>
     <div class="left_item">
-        <button>+ New</button>
+        <button class="restart_btn">+ New</button>
     </div>
     <WelcomeItem>
         <audio controls>
@@ -39,6 +39,32 @@ h1{
   position: relative;
   text-align: left;
   transform: translate(-50%, -50%);
+}
+
+.restart_btn{
+    font-family: 'Figtree', sans-serif;
+    background-color: #202020;
+    color: #b9d4b4;
+    transition: 0.3s ease-in-out;
+    border: 0.01em solid #b9d4b4;
+    border-radius: 0.2em;
+    padding: 0px 14px;
+    text-align: left;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.restart_btn:hover{
+    background-color: #6aae9d;
+    color: #202020;
+    transition: 0.3s ease-in-out;
+    border-radius: 0.2em;
+}
+
+.restart_btn:active{
+    background-color: #b9d4b4;
+    color: #202020;
+    transition: 0.3s ease-in-out;
 }
 
 .item {
