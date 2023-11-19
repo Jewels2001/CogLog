@@ -11,7 +11,7 @@ let request;
 let source;
 
 // Change these to prover values
-let URL = "localhost"
+let URL = "192.168.2.14"
 let PORT = "8080"
 
 function TestMP3(abc) {
@@ -35,8 +35,8 @@ function TestMP3(abc) {
         source.start(0);
       });
     };
-    console.log('sending')
-    request.send(body = abc);
+    console.log(abc);
+    request.send(abc);
   } catch (e) {
     console.error(e)
     alert("web audio api not supported");
