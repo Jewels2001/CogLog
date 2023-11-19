@@ -4,7 +4,7 @@ import WelcomeItem from './WelcomeItem.vue'
 
 <template>
   <WelcomeItem>
-    <template #title>CogLog</template>
+    <template #title></template>
   </WelcomeItem>
 
   <WelcomeItem>

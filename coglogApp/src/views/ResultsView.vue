@@ -1,14 +1,10 @@
-<script setup>
-import TheResult from '../components/TheResult.vue';
-</script>
-
 <template>
-  <main>
-    <TheResult />
-  </main>
-</template>
+    <div class="results">
+      <h1>This is your results (text, and audio playback)</h1>
+    </div>
+  </template>
   
-<style scoped>
+  <style scoped>
   .results {
   text-align: center;
   display: flex;

@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import Buttons from './components/Buttons.vue'
 </script>
 
 <template>
