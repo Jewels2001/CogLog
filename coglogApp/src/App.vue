@@ -43,6 +43,16 @@ nav a {
   border-bottom: 1px solid var(--color-border);
 }
 
+.footer {
+  padding-left: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-background-soft)
+}
 </style>
 
 <!--
