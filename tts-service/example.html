@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>CogLog</title>
+        <script>
+            let context;
+            let request;
+            let source;
+
+            // Change these to prover values
+            let URL = "localhost"
+            let PORT = "8080"
+
+            function TestMP3() {
+                try {
+                    // Request from server
+                    context = new AudioContext();
+                    request = new XMLHttpRequest();
+                    request.open(
+                        "POST",
+                        "http://"+URL+":"+PORT+"/bci-decode/audio",
+                        true,
+                    );
+                    request.responseType = "arraybuffer";
+
+                    // Play Audio
+                    request.onload = () => {
+                        context.decodeAudioData(request.response, (buffer) => {
+                            source = context.createBufferSource();
+                            source.buffer = buffer;
+                            source.connect(context.destination);
+                            source.start(0);
+                        });
+                    };
+
+                    request.send(body=3);
+                } catch (e) {
+                    console.error(e)
+                    alert("web audio api not supported");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>CogLog Audio Stream Demo</h1>
+
+        <!-- Trigger the event -->
+        <button onclick="TestMP3()">Play</button>
+    </body>
+</html>
