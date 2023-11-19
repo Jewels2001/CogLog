@@ -43,6 +43,10 @@ nav a {
   border-bottom: 1px solid var(--color-border);
 }
 
+nav a:hover{
+  color: #202020;
+}
+
 .footer {
   padding-left: 2em;
   padding-top: 1em;
