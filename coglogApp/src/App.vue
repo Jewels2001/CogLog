@@ -1,16 +1,23 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import Buttons from './components/Buttons.vue'
 </script>
 
 <template>
   <header>
-    <div class="uploadBtn">
-      <Buttons title = "UPLOAD"/>
+    <div class = "container">
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/results">Results</RouterLink>
+      </nav>
+
     </div>
+
   </header>
 
   <RouterView />
+  <div class="footer">
+    <img alt="CogLog logo" class="logo" src="@/assets/clfullcolor.svg" width="85" height="65" /> 
+  </div>
 </template>
 
 <style scoped>
@@ -18,15 +25,38 @@ header {
   line-height: 1.5;
   max-height: 100vh;
 }
-.uploadBtn {
+
+nav {
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
 }
 
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
 
+nav a:hover{
+  color: #202020;
+}
+
+.footer {
+  padding-left: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-background-soft)
+}
 </style>
 
 <!--
