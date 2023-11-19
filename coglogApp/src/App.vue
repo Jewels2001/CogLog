@@ -15,6 +15,9 @@ import { RouterLink, RouterView } from 'vue-router'
   </header>
 
   <RouterView />
+  <div class="footer">
+    <img alt="CogLog logo" class="logo" src="@/assets/clfullcolor.svg" width="85" height="65" /> 
+  </div>
 </template>
 
 <style scoped>
@@ -39,10 +42,6 @@ nav a {
   padding: 0 1rem;
   border-bottom: 1px solid var(--color-border);
 }
-
-nav a:hover {
-    color: #202020;
-  }
 
 </style>
 
