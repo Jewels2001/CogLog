@@ -1,9 +1,15 @@
 <template>
   <div class="item">
+    
+    <!--
     <i>
       <slot name="icon"></slot>
     </i>
+    -->
     <div class="details">
+      <h1>
+        <slot name = "title"></slot>
+      </h1>
       <h3>
         <slot name="heading"></slot>
       </h3>
@@ -13,10 +19,23 @@
 </template>
 
 <style scoped>
+h1{
+  font-size: 5rem;
+  font-weight: 500;
+  color: var(--color-heading);
+  position: absolute;
+  top: -8600%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .item {
-  margin-top: 2rem;
+  text-align: center;
   display: flex;
-  position: relative;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .details {
@@ -24,6 +43,7 @@
   margin-left: 1rem;
 }
 
+/*
 i {
   display: flex;
   place-items: center;
@@ -32,6 +52,7 @@ i {
   height: 32px;
   color: var(--color-text);
 }
+*/
 
 h3 {
   font-size: 1.2rem;
@@ -40,6 +61,7 @@ h3 {
   color: var(--color-heading);
 }
 
+/*
 @media (min-width: 1024px) {
   .item {
     margin-top: 0;
@@ -83,4 +105,5 @@ h3 {
     display: none;
   }
 }
+*/
 </style>
