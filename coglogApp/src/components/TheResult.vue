@@ -7,7 +7,7 @@ import WelcomeItem from './WelcomeItem.vue'
 
 const result_dat = reactive({
     txt: 'This is your result in text form, This message would be replaced with text data decoded by the model.',
-    aup: './src/components/audio/test.mp3'
+    aup: '@/components/audio/test.mp3'
 })
 
 //const result_txt = ref('This is your result in text form, This message would be replaced with text data decoded by the model.')
@@ -24,7 +24,7 @@ const result_dat = reactive({
     </div>
     <WelcomeItem>
         <audio controls>
-            <source src='coglogApp/src/components/audio/test.mp3' type="audio/mpeg">
+            <source src={{result_dat.aup}} type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </WelcomeItem>
