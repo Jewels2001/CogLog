@@ -2,7 +2,7 @@
   <div>
     <h1>
         <slot name = "title">
-          <img alt="CogLog logo" class="logo" src="@/assets/coglogLogo.svg" width="525" height="125" />
+          <img alt="CogLog logo" class="logo" src="@/assets/clfullcolor.svg" width="525" height="125" />
         </slot>
     </h1>
   
