@@ -21,17 +21,23 @@ Decoder Model:
 Gateway Service:
 `go run server.go`
 
+## Roadmap for Future
+We can improve upon our SAAS by providing a fully functioning platform, and implementing tools such as wearables and mobile apps. This could also lead to the ability to make a natural recording of one's thoughts, such as live note-taking (during lectues or meetings) or an idea journal.
+We could also personalize this usecase, by providing support for multiple voices and enable real time decoding of brain data.
+Further, we could improve upon our decoding performace, possibly writing our own BCI decoder model fromm scratch with a larger and more robust dataset.
+
+
 ## Contributors
-- Name
-- Name
-- Name
-- Name
-- Name
+- Ali Amusat: Neuroscience Specialist, Graphic and UI/UX Designer
+- Rozella Ricci Dagta: Graphic and UI/UX Designer, Full Stack
+- Alex Hughes: Business Strategist, Frontend
+- Dustin Ward: Backend, Full Stack
+- Julie Wojtiw-Quo: ML Specialist, Full Stack
 
 ## Project Links
 - [Devpost](https://devpost.com/software/coglog)
-- [Slide Deck]()
-- [Video]()
+- [Slide Deck](https://docs.google.com/presentation/d/1Xrh-y_W0OSOFUX3jnuKIfwNEUtSFSuoYoYQwCp_6Km8/edit?usp=sharing)
+- [Video](https://youtu.be/DVbrny5-V0c)
 
 ## Resources
 - [Dataset](https://datadryad.org/stash/dataset/doi:10.5061/dryad.x69p8czpq)
