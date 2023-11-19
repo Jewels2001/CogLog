@@ -10,32 +10,28 @@ defineProps(['title'])
 
 <style scoped>
 button {
-    font-family: Trebuchet, Verdana, sans-serif;
-    font-weight: bold;
-    background-color: #e3e3e3;
-    border: none;
-    color: #090909;
+    font-family: 'Figtree', sans-serif;
+    background-color: #202020;
+    color: #6aae9d;
+    transition: 0.3s ease-in-out;
+    border: 0.01em solid #6aae9d;
+    border-radius: 0.2em;
     padding: 0px 54px;
     text-align: center;
     display: inline-block;
     font-size: 64px;
-    border-radius: 0.2em;
-    transition: 0.3s ease-in-out;
-    border-color: #e3e3e3;
 }
 
 button:hover{
-    background-color: #090909;
-    color: #e3e3e3;
+    background-color: #b9d4b4;
+    color: #202020;
     transition: 0.3s ease-in-out;
-    border: 0.01em solid #e3e3e3;
-    border-color: #e3e3e3;
     border-radius: 0.2em;
 }
 
 button:active{
-    background-color: #e3e3e3;
-    color: #090909;
+    background-color: #6aae9d;
+    color: #202020;
     transition: 0.3s ease-in-out;
 }
 

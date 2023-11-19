@@ -11,6 +11,7 @@ import WelcomeItem from './WelcomeItem.vue'
     <template #heading>Brain to Speech Program</template>
     <a href="https://github.com/Jewels2001/CogLog" target="_blank" rel="noopener">Our GitHub</a>
     provides you with all information you need to get started.
+    <br> Accepted files for upload: .............
   </WelcomeItem>
 </template>
 <!--

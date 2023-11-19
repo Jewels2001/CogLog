@@ -1,4 +1,6 @@
 /* color palette from <https://github.com/vuejs/theme> */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500&display=swap');
+
 :root {
   --vt-c-white: #e3e3e3;
   --vt-c-white-soft: #f8f8f8;
@@ -67,6 +69,7 @@ body {
     background-color 0.5s;
   line-height: 1.6;
   font-family:
+    'Figtree',
     Inter,
     -apple-system,
     BlinkMacSystemFont,

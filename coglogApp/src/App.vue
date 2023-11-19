@@ -40,6 +40,10 @@ nav a {
   border-bottom: 1px solid var(--color-border);
 }
 
+nav a:hover {
+    color: #202020;
+  }
+
 </style>
 
 <!--
