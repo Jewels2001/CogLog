@@ -1,14 +1,16 @@
 <script setup>
 // Import stuff you need here
-import {ref} from 'vue'
+import {ref} from 'vue';
 import { reactive } from 'vue';
-import WelcomeItem from './WelcomeItem.vue'
+import WelcomeItem from './WelcomeItem.vue';
 
 
 const result_dat = reactive({
     txt: 'This is your result in text form, This message would be replaced with text data decoded by the model.',
     aup: '@/components/audio/test.mp3'
 })
+
+
 
 //const result_txt = ref('This is your result in text form, This message would be replaced with text data decoded by the model.')
 //const result_audio = reactive('tts-service\test.mp3') // Path to audio file should be here...?
@@ -23,8 +25,8 @@ const result_dat = reactive({
         <button class="restart_btn">+ New</button>
     </div>
     <WelcomeItem>
-        <audio controls>
-            <source src={{result_dat.aup}} type="audio/mpeg">
+        <audio class="audio_s" controls>
+            <source src=result_dat.aup type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </WelcomeItem>
@@ -41,6 +43,11 @@ h1{
   transform: translate(-50%, -50%);
 }
 
+.audio_s{
+    width: 610px;
+    color: #b9d4b4;
+    border-radius: 0.2em;
+}
 .restart_btn{
     font-family: 'Figtree', sans-serif;
     background-color: #202020;
