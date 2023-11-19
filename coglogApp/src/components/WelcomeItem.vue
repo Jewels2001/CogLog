@@ -39,6 +39,18 @@ h1{
   transform: translate(-50%, -50%);
 }
 
+.right_item {
+  text-align: right;
+  display: flex;
+  position: relative;
+}
+
+.left_item {
+  text-align: left;
+  display: flex;
+  position: relative;
+}
+
 .details {
   flex: 1;
   margin-left: 1rem;
