@@ -6,10 +6,14 @@ For [natHACKS 2023](https://nathacks23.devpost.com/) focused on brain-to-text an
 ///
 
 ## Intro
-write introductory stuff here about the amazing things BCI can do. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel feugiat ante. In lorem ipsum, lobortis ut nunc at, mattis ornare sem. Donec sit amet ultrices nulla. Sed eget lorem quis quam accumsan ornare id a purus. Ut scelerisque arcu neque, a interdum turpis rhoncus sit amet. Cras sem felis, vehicula vitae massa at, venenatis pretium enim. Suspendisse et tortor sed nunc mollis volutpat sed ut felis. Donec ultrices neque quis tincidunt vestibulum. Sed sit amet varius ligula. Sed gravida sem in tortor mollis, quis dapibus nibh porta. Sed vel convallis odio, quis molestie felis. 
+Brain-Computer Interface (BCI) equipment allows people to connect with their environment and other people with greater awareness and capability. CogLog has produced a SAAS called Cerecode that leverages BCI technology to convert brain wave readings into spoken speech. This gives people who have limited or decreasing speech capabilities a way to communicate more clearly with those around them. More specifically, Cerecode utilizes models from the open-source [dataset](https://datadryad.org/stash/dataset/doi:10.5061/dryad.x69p8czpq) associated with [_"A high-performace speech neruprosthesis"_](https://www.nature.com/articles/s41586-023-06377-x.pdf) which focuses on decoding phonemes from intracortical microelectrode arrays. 
 
 ## Usage
-write a list of usage instructions
+Client-Side:
+`npm install`
+`npm run dev`
+
+Model + Backend:
 1. Do x
 2. Do y
 3. Do z
@@ -23,3 +27,13 @@ write a list of usage instructions
 - Name
 - Name
 - Name
+
+## Project Links
+- [Devpost](https://devpost.com/software/coglog)
+- [Slide Deck]()
+- [Video]()
+
+## Resources
+- [Dataset](https://datadryad.org/stash/dataset/doi:10.5061/dryad.x69p8czpq)
+- [Dataset's associated codebase](https://github.com/fwillett/speechBCI/tree/main)
+- [KARA One study and dataset](http://www.cs.toronto.edu/~complingweb/data/karaOne/karaOne.html)
